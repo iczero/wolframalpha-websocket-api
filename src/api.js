@@ -81,6 +81,11 @@ class QueryResult extends Response {
      */
     this.pods = new Map();
     /**
+     * Pods returned as errors
+     * @type {object[]}
+     */
+    this.erroredPods = [];
+    /**
      * Received step-by-step pods by position
      * NOTE: will not be complete as a pro subscription is required
      * @type {Map<number, object>}
@@ -180,7 +185,8 @@ class QueryResult extends Response {
       }
       case 'pods': {
         for (let pod of obj.pods) {
-          this.pods.set(pod.position, pod);
+          if (pod.error) this.erroredPods.push(pod);
+          else this.pods.set(pod.position, pod);
         }
         break;
       }
