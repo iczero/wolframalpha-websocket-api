@@ -1,0 +1,16 @@
+{
+  "name": "wolframalpha-websocket-api",
+  "version": "0.1.0",
+  "description": "fetches results from wolframalpha using websockets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "iczero",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^4.2.0",
+    "uuid": "^8.3.1",
+    "ws": "^7.3.1"
+  }
+}
