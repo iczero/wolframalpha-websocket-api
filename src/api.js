@@ -1,7 +1,7 @@
 // @ts-check
 const WebSocket = require('ws');
 const EventEmitter = require('events');
-const uuid = require('uuid/v4');
+const uuid = require('uuid').v4;
 const debug = require('debug')('wolframalpha:api');
 
 const API_URL = 'wss://www.wolframalpha.com/n/v1/api/fetcher/results';
